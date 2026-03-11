@@ -1,23 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { useQuery, useMutation } from "convex/react";
+import { api } from "convex/_generated/api";
+import { useToast } from "../../components/ui/ToastProvider";
+import { AvatarUpload } from "../../components/ui/AvatarUpload";
 
 export function ProfilePage() {
-    const [name, setName] = useState("User");
-    const [email, setEmail] = useState("user@example.com");
-    const [saved, setSaved] = useState(false);
+    const user = useQuery(api.users.viewer);
+    const updateProfile = useMutation(api.users.updateProfile);
+    const { success, error } = useToast();
 
-    const handleSave = (e: React.FormEvent) => {
+    const [name, setName] = useState("");
+    const [bio, setBio] = useState("");
+    const [saving, setSaving] = useState(false);
+
+    // Sync form with server data when it arrives
+    useEffect(() => {
+        if (user) {
+            setName(user.name || "");
+            setBio(user.bio || "");
+        }
+    }, [user]);
+
+    const handleSave = useCallback(async (e: React.FormEvent) => {
         e.preventDefault();
-        // TODO: persist to Convex when backend user profile table is ready
-        setSaved(true);
-        setTimeout(() => setSaved(false), 2000);
-    };
-
-    const initials = name
-        .split(" ")
-        .map((n) => n[0])
-        .join("")
-        .toUpperCase()
-        .slice(0, 2) || "U";
+        setSaving(true);
+        try {
+            await updateProfile({ name, bio });
+            success("Profile updated successfully!");
+        } catch {
+            error("Failed to save profile. Please try again.");
+        } finally {
+            setSaving(false);
+        }
+    }, [name, bio, updateProfile, success, error]);
 
     return (
         <div className="page">
@@ -28,11 +43,9 @@ export function ProfilePage() {
 
             <div className="profile-layout">
                 <div className="profile-avatar-section">
-                    <div className="avatar avatar--lg">
-                        <span>{initials}</span>
-                    </div>
+                    <AvatarUpload size="xl" />
                     <p className="profile-avatar-hint">
-                        Your initials are used as your avatar. Update your name below.
+                        Click to upload a new avatar.
                     </p>
                 </div>
 
@@ -53,15 +66,27 @@ export function ProfilePage() {
                         <input
                             id="profile-email"
                             type="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            placeholder="you@example.com"
+                            value={user?.email ?? ""}
+                            disabled
+                            className="input-disabled"
+                        />
+                        <span className="form-hint">Email is linked to your sign-in account and cannot be changed.</span>
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="profile-bio">Bio</label>
+                        <textarea
+                            id="profile-bio"
+                            value={bio}
+                            onChange={(e) => setBio(e.target.value)}
+                            placeholder="Tell us about yourself…"
+                            rows={3}
                         />
                     </div>
 
                     <div className="form-actions">
-                        <button type="submit" className="btn btn-primary">
-                            {saved ? "✓ Saved!" : "Save Changes"}
+                        <button type="submit" className="btn btn-primary" disabled={saving}>
+                            {saving ? "Saving…" : "Save Changes"}
                         </button>
                     </div>
                 </form>

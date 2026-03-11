@@ -1,0 +1,10 @@
+name: "ai-appointment-booking"
+team: "mehdi-verse-core"
+convex_project: "ai-appointment-booking"
+services:
+  convex:
+    url: "https://ai-appointment-booking.convex.cloud"
+    notes: "Standalone deployment — Team: mehdi-verse-core"
+  vercel:
+    url: "https://ai-appointment-booking.vercel.app"
+    notes: "Auto-deployed from main branch"

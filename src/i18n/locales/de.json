@@ -1,0 +1,55 @@
+{
+    "app": {
+        "loading": "Wird geladen…",
+        "backendNotConnected": "Backend nicht verbunden",
+        "backendRequired": "Diese App benötigt ein Convex-Backend.",
+        "setupRequired": "Einrichtung erforderlich:",
+        "setupStep1": "VITE_CONVEX_URL in .env.local setzen",
+        "setupStep2": "Neu deployen oder den Dev-Server neustarten",
+        "setupHint": "npx convex dev ausführen, um die URL zu erhalten"
+    },
+    "auth": {
+        "welcomeBack": "Willkommen zurück",
+        "createAccount": "Konto erstellen",
+        "signInContinue": "Anmelden, um fortzufahren",
+        "getStartedFree": "Jetzt kostenlos starten",
+        "email": "E-Mail",
+        "emailPlaceholder": "du@beispiel.de",
+        "password": "Passwort",
+        "signIn": "Anmelden",
+        "signUp": "Registrieren",
+        "createAccountBtn": "Konto erstellen",
+        "pleaseWait": "Bitte warten…",
+        "invalidCredentials": "Ungültige E-Mail oder Passwort.",
+        "accountError": "Konto konnte nicht erstellt werden. Versuche eine andere E-Mail.",
+        "noAccount": "Noch kein Konto?",
+        "hasAccount": "Bereits ein Konto?"
+    },
+    "landing": {
+        "badge": "Teil des Mehdi Verse ✨",
+        "getStarted": "Loslegen",
+        "getStartedFree": "Jetzt kostenlos starten →",
+        "features": "Funktionen",
+        "builtWithModernTech": "Mit moderner Technologie gebaut",
+        "featuresSubtitle": "Alles, was du brauchst, um großartige Apps zu bauen — unterstützt von einem gemeinsamen Convex-Backend.",
+        "featureSync": "Echtzeit-Synchronisation",
+        "featureSyncDesc": "Powered by Convex — Daten werden sofort auf allen verbundenen Clients aktualisiert.",
+        "featureAuth": "Sichere Authentifizierung",
+        "featureAuthDesc": "Integrierte E-Mail- & Passwort-Authentifizierung mit Sitzungsverwaltung.",
+        "featureProduction": "Produktionsbereit",
+        "featureProductionDesc": "CI/CD-Pipelines, Typsicherheit und optimierte Builds sofort einsatzbereit.",
+        "featureResponsive": "Responsives Design",
+        "featureResponsiveDesc": "Sieht auf Desktop, Tablet und Mobilgeräten großartig aus."
+    },
+    "nav": {
+        "dashboard": "Dashboard",
+        "profile": "Profil",
+        "settings": "Einstellungen",
+        "signOut": "Abmelden"
+    },
+    "footer": {
+        "copyright": "© 2026 Mehdi Nabhani",
+        "github": "GitHub",
+        "coffee": "Kauf mir einen Kaffee ☕"
+    }
+}

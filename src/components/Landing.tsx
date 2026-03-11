@@ -1,5 +1,5 @@
-import { SignIn } from "./SignIn";
 import { APP_CONFIG } from "../config";
+import { Link } from "react-router-dom";
 
 const FEATURES = [
     {
@@ -24,7 +24,10 @@ const FEATURES = [
     },
 ];
 
+// props removed
+
 export function Landing() {
+
     return (
         <div className="landing">
             <header className="hero">
@@ -36,7 +39,10 @@ export function Landing() {
                     </div>
                     <div className="nav-links">
                         <a href="#features" className="nav-link">Features</a>
-                        <a href="#auth" className="btn btn-primary btn-sm">Get Started</a>
+                        <Link to="/signin" className="nav-link">Sign In</Link>
+                        <Link to="/signup" className="btn btn-primary btn-sm">
+                            Get Started
+                        </Link>
                     </div>
                 </nav>
 
@@ -44,9 +50,9 @@ export function Landing() {
                     <div className="hero-badge">Part of The Mehdi Verse ✨</div>
                     <h1 className="hero-title">{APP_CONFIG.title}</h1>
                     <p className="hero-description">{APP_CONFIG.description}</p>
-                    <a href="#auth" className="btn btn-primary btn-lg">
+                    <Link to="/signup" className="btn btn-primary btn-lg">
                         Get Started Free →
-                    </a>
+                    </Link>
                 </div>
             </header>
 
@@ -66,8 +72,19 @@ export function Landing() {
                 </div>
             </section>
 
-            <section id="auth" className="auth-section">
-                <SignIn />
+            <section className="cta-section">
+                <div className="cta-card">
+                    <h2>Ready to get started?</h2>
+                    <p>Create your free account and start building today.</p>
+                    <div className="cta-buttons">
+                        <Link to="/signup" className="btn btn-primary btn-lg">
+                            Create Free Account
+                        </Link>
+                        <Link to="/signin" className="btn btn-outline btn-lg">
+                            Sign In
+                        </Link>
+                    </div>
+                </div>
             </section>
 
             <footer className="footer">

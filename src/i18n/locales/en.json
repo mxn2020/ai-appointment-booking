@@ -1,0 +1,55 @@
+{
+    "app": {
+        "loading": "Loading…",
+        "backendNotConnected": "Backend Not Connected",
+        "backendRequired": "This app requires a Convex backend to function.",
+        "setupRequired": "Setup required:",
+        "setupStep1": "Set VITE_CONVEX_URL in your .env.local",
+        "setupStep2": "Redeploy or restart the dev server",
+        "setupHint": "Run npx convex dev to get your URL"
+    },
+    "auth": {
+        "welcomeBack": "Welcome back",
+        "createAccount": "Create your account",
+        "signInContinue": "Sign in to continue",
+        "getStartedFree": "Get started for free",
+        "email": "Email",
+        "emailPlaceholder": "you@example.com",
+        "password": "Password",
+        "signIn": "Sign In",
+        "signUp": "Sign up",
+        "createAccountBtn": "Create Account",
+        "pleaseWait": "Please wait…",
+        "invalidCredentials": "Invalid email or password.",
+        "accountError": "Could not create account. Try a different email.",
+        "noAccount": "Don't have an account?",
+        "hasAccount": "Already have an account?"
+    },
+    "landing": {
+        "badge": "Part of The Mehdi Verse ✨",
+        "getStarted": "Get Started",
+        "getStartedFree": "Get Started Free →",
+        "features": "Features",
+        "builtWithModernTech": "Built with Modern Tech",
+        "featuresSubtitle": "Everything you need to build amazing apps, powered by a shared Convex backend.",
+        "featureSync": "Real-time Sync",
+        "featureSyncDesc": "Powered by Convex — data updates instantly across all connected clients.",
+        "featureAuth": "Secure Auth",
+        "featureAuthDesc": "Built-in email & password authentication with session management.",
+        "featureProduction": "Production Ready",
+        "featureProductionDesc": "CI/CD pipelines, type safety, and optimized builds out of the box.",
+        "featureResponsive": "Responsive Design",
+        "featureResponsiveDesc": "Looks great on desktop, tablet, and mobile devices."
+    },
+    "nav": {
+        "dashboard": "Dashboard",
+        "profile": "Profile",
+        "settings": "Settings",
+        "signOut": "Sign Out"
+    },
+    "footer": {
+        "copyright": "© 2026 Mehdi Nabhani",
+        "github": "GitHub",
+        "coffee": "Buy Me a Coffee ☕"
+    }
+}

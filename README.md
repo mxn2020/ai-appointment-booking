@@ -1,94 +1,40 @@
 # AI Appointment Booking Bot
 
+[![CI](https://github.com/mxn2020/ai-appointment-booking/actions/workflows/ci.yml/badge.svg)](https://github.com/mxn2020/ai-appointment-booking/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 An intelligent appointment scheduling system with AI-powered booking management.
 
 Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
 ## Tech Stack
 
-- **Frontend**: React 19 + TypeScript + Vite
-- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
-- **Auth**: Email/password via `@convex-dev/auth`
+- **Frontend**: React 19 + TypeScript + Vite + TailwindCSS
+- **Backend**: Convex
+- **Auth**: `@convex-dev/auth` with `@geenius-auth/react`
+- **UI**: TailwindCSS + `@geenius-ui/react-css` design system
+- **AI**: `@geenius-ai/react` for AI features
+- **Tools**: `@geenius-tools/errors-react` for error handling
 
 ## Getting Started
 
 ```bash
-npm install
+pnpm install
 cp .env.example .env.local
 # Set VITE_CONVEX_URL to your deployment URL
-npm run dev
+pnpm dev
 ```
-
-## License
-
-MIT © Mehdi Nabhani
-
----
-
-<details>
-<summary>📋 Original Feature Spec</summary>
-
-# {{APP_TITLE}}
-
-{{APP_DESCRIPTION}}
-
-Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
-
-## Tech Stack
-
-- **Frontend**: React 19 + TypeScript + Vite
-- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
-- **Auth**: Email/password via `@convex-dev/auth`
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 22+
-- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
-
-### Setup
-
-```bash
-# Install dependencies
-npm install
-
-# Create .env.local with your Convex URL
-cp .env.example .env.local
-# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
-
-# Start the dev server
-npm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) to view the app.
 
 ## Scripts
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start Vite dev server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run typecheck` | Run TypeScript type checking |
-
-## Project Structure
-
-```
-src/
-  main.tsx              # Entry point with ConvexAuthProvider
-  App.tsx               # Auth routing (Landing vs Dashboard)
-  App.css               # Component styles
-  index.css             # Global styles & design tokens
-  components/
-    Landing.tsx          # Marketing/landing page
-    SignIn.tsx           # Auth form (sign-in/sign-up)
-    Dashboard.tsx        # Authenticated app shell
-api.ts                   # Convex API types (from shared backend)
-```
+| `pnpm dev` | Start development server |
+| `pnpm build` | Build for production |
+| `pnpm lint` | Run ESLint |
+| `pnpm test` | Run tests with Vitest |
+| `pnpm typecheck` | TypeScript type checking |
 
 ## License
 
 MIT © Mehdi Nabhani
-
-</details>

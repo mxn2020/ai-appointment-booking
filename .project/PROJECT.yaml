@@ -1,0 +1,16 @@
+name: ai-appointment-booking
+project_scope: main
+project_type: standalone
+description: An intelligent appointment scheduling system with AI-powered booking management.
+tier: prototype
+lane: personal
+priority: medium
+oss: true
+stack: ["typescript", "react", "vite", "convex", "tailwind"]
+repo: "https://github.com/mxn2020/ai-appointment-booking"
+deploy_url: null
+last_active: 2026-03-11
+tags: ["ai-appointment-booking", "convex", "react"]
+notes: null
+id: null
+category: webapp

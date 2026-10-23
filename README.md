@@ -37,7 +37,7 @@ pnpm dev
 
 ## License
 
-MIT © AVS Media
+Apache-2.0 © AVS Media
 
 ---
 

@@ -37,7 +37,7 @@ pnpm dev
 
 ## License
 
-MIT © Mehdi Nabhani
+MIT © AVS Media
 
 ---
 

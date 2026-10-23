@@ -51,7 +51,7 @@
   },
   "description": "An intelligent appointment scheduling system with AI-powered booking management.",
   "author": "Mehdi Nabhani",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": [
     "ai",
     "appointment",
